@@ -11,8 +11,8 @@ type TProps = {
 const NewTask = ({ onAddTask }: TProps) => {
   const { isLoading, error, sendRequest: sendTaskRequest } = useHttp();
 
-  const createTask = (taskText: string, taskData: any) => {
-    const generatedId = taskData.name; // firebase-specific => "name" contains generated id
+  const createTask = (taskText: string, taskData: TtaskModel) => {
+    const generatedId = taskData.id; // firebase-specific => "name" contains generated id
     const createdTask = { id: generatedId, text: taskText };
 
     onAddTask(createdTask);
