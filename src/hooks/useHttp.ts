@@ -1,7 +1,12 @@
 import { useState, useCallback } from 'react';
 
 type TsendRequest = {
-  requestConfig: { url: string; method?: string; headers?: {}; body?: string };
+  requestConfig: {
+    url: string;
+    method?: string;
+    headers?: {};
+    body?: string | { text: string };
+  };
   applyData: (data: any) => void;
 };
 
