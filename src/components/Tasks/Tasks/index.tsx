@@ -7,7 +7,7 @@ import { TtaskModel } from '@libs/models/task.model';
 type TProps = {
   items: TtaskModel[];
   error: any;
-  onFetch: () => Promise<void>;
+  onFetch: (data: any) => Promise<void>;
   loading: boolean;
 };
 
